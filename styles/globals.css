@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --font: ui-sans-serif,system-ui,apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";
+    --foreground: #37352f;
+    --foreground-0: rgba(55,53,47,.09);
+    --foreground-1: rgba(55,53,47,.16);
+    --foreground-2: rgba(55,53,47,.4);
+    --foreground-3: rgba(55,53,47,.6);
+    --foreground-4: #000;
+    --foreground-5: rgba(55,53,47,.024);
+    --foreground-6: rgba(55,53,47,.8);
+    --foreground-icon: var(--foreground);
+    --background: #fff;
+    --background-0: hsla(44,6%,50%,.15);
+    --background-1: #f7f6f3;
+    --background-2: hsla(44,6%,50%,.15);
+    --select-color-0: #2eaadc;
+    --select-color-1: rgba(45,170,219,.3);
+    --select-color-2: #d9eff8;
+    --red: #e03e3e;
+    --pink: #ad1a72;
+    --blue: #0b6e99;
+    --purple: #6940a5;
+    --teal: #4d6461;
+    --yellow: #dfab01;
+    --orange: #d9730d;
+    --brown: #64473a;
+    --gray: #9b9a97;
+    --red_background: #fbe4e4;
+    --pink_background: #f4dfeb;
+    --blue_background: #ddebf1;
+    --purple_background: #eae4f2;
+    --teal_background: #ddedea;
+    --yellow_background: #fbf3db;
+    --orange_background: #faebdd;
+    --brown_background: #e9e5e3;
+    --gray_background: #ebeced;
+    --red_background_co: hsla(0,74%,94%,.3);
+    --pink_background_co: rgba(244,223,235,.3);
+    --blue_background_co: rgba(221,235,241,.3);
+    --purple_background_co: rgba(234,228,242,.3);
+    --teal_background_co: rgba(221,237,234,.3);
+    --yellow_background_co: hsla(45,80%,92%,.3);
+    --orange_background_co: hsla(29,74%,92%,.3);
+    --brown_background_co: hsla(20,12%,90%,.3);
+    --gray_background_co: hsla(210,5%,93%,.3);
+    --item-blue: rgba(0,120,223,.2);
+    --item-orange: rgba(245,93,0,.2);
+    --item-green: rgba(0,135,107,.2);
+    --item-pink: rgba(221,0,129,.2);
+    --item-brown: rgba(140,46,0,.2);
+    --item-red: rgba(255,0,26,.2);
+    --item-yellow: rgba(233,168,0,.2);
+    --item-default: hsla(45,4%,80%,.5);
+    --item-purple: rgba(103,36,222,.2);
+    --item-gray: hsla(45,2%,60%,.4);
+    --max-width: 720px;
+    --header-height: 45px
+    
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+      --foreground: hsla(0,0%,100%,.9);
+      --foreground-0: var(--foreground);
+      --foreground-1: var(--foreground);
+      --foreground-2: var(--foreground);
+      --foreground-3: var(--foreground);
+      --foreground-4: var(--foreground);
+      --foreground-5: hsla(0,0%,100%,.7);
+      --foreground-6: #fff;
+      --foreground-icon: #fff;
+      --background: #2f3437;
+      --background-0: #474c50;
+      --background-1: #3f4447;
+      --background-2: hsla(44,6%,50%,.15);
+      --red: #ff7369;
+      --pink: #e255a1;
+      --blue: #529cca;
+      --purple: #9a6dd7;
+      --teal: #4dab9a;
+      --yellow: #ffdc49;
+      --orange: #ffa344;
+      --brown: #937264;
+      --gray: hsla(195,2%,60%,.95);
+      --red_background: #594141;
+      --pink_background: #533b4c;
+      --blue_background: #364954;
+      --purple_background: #443f57;
+      --teal_background: #354c4b;
+      --yellow_background: #59563b;
+      --orange_background: #594a3a;
+      --brown_background: #434040;
+      --gray_background: #454b4e;
+      --red_background_co: rgba(89,65,65,.3);
+      --pink_background_co: rgba(83,59,76,.3);
+      --blue_background_co: rgba(120,162,187,.3);
+      --purple_background_co: rgba(68,63,87,.3);
+      --teal_background_co: rgba(53,76,75,.3);
+      --yellow_background_co: rgba(89,86,59,.3);
+      --orange_background_co: rgba(89,74,58,.3);
+      --brown_background_co: rgba(67,64,64,.3);
+      --gray_background_co: rgba(69,75,78,.3)
+    
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-primary text-primaryFg;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
