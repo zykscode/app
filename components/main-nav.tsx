@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import React, { memo, useState } from 'react';
+import React, { memo } from 'react';
 import { ModeToggle } from './mode-toggle';
 import type { MainNavItem } from '@/types';
 
@@ -16,7 +16,7 @@ function MainNav({ items, className }: Props) {
     return items?.map((item) => (
       <Link
         key={item.href}
-        className="duration-['2ms'] ease-lieaar hover:bg-accent-light hover:dark:bg-accent-dark border-colours-blue p-3 transition-colors hover:border-b-2 hover:opacity-80 md:p-4"
+        className="rounded-md border-b-2 border-transparent p-3 transition-colors duration-150 ease-linear hover:bg-accent hover:text-accent-foreground hover:border-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:p-4"
         href={item.href}
       >
         {item.title}
