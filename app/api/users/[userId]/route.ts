@@ -2,7 +2,7 @@ import { getServerSession } from "next-auth/next"
 import { z } from "zod"
 
 import { authOptions } from "@/lib/auth"
-import { db } from "@/lib/db"
+import { updateUserName } from "@/lib/services/admin/user-service"
 import { userNameSchema } from "@/lib/validations/user"
 
 const routeContextSchema = z.object({
@@ -29,14 +29,10 @@ export async function PATCH(
     const body = await req.json()
     const payload = userNameSchema.parse(body)
 
-    // Update the user.
-    await db.user.update({
-      where: {
-        id: session.user.id,
-      },
-      data: {
-        name: payload.name,
-      },
+    await updateUserName({
+      actorId: session.user.id,
+      userId: session.user.id,
+      name: payload.name,
     })
 
     return new Response(null, { status: 200 })
