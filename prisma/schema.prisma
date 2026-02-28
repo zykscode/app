@@ -53,7 +53,8 @@ model User {
 
   accounts Account[]
   sessions Session[]
-  Post     Post[]
+  Post      Post[]
+  auditLogs  AuditLog[]
 
   stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
   stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
@@ -61,6 +62,23 @@ model User {
   stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
 
   @@map(name: "users")
+}
+
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String   @map(name: "actor_id")
+  action     String
+  entityType String   @map(name: "entity_type")
+  entityId   String?  @map(name: "entity_id")
+  metadata   Json?
+  createdAt  DateTime @default(now()) @map(name: "created_at")
+
+  actor User @relation(fields: [actorId], references: [id], onDelete: Cascade)
+
+  @@index([actorId])
+  @@index([entityType, entityId])
+  @@map(name: "audit_logs")
 }
 
 model VerificationToken {
